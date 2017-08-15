@@ -8,6 +8,7 @@ class Perceptron and its trainning
 import random
 import matplotlib.pyplot as plt
 import operator
+import math as m
 
 class Perceptron:
     'Common base class for all perceptrons'
@@ -29,14 +30,15 @@ class Perceptron:
      
         
     """
-	   act method recieves binary input as array. Returns 1 or 0 if condition met
+	   act method recieves binary input as array. Returns sigmoide activation (1 or 0 if condition met)
 	   @param x int[2]
        @return act int
     """
    
     def act(self, x):      
        f=(x[0]*self.w[1] + x[1]*self.w[2] + self.w[0])
-       if(f<=0):
+       f=1/(1+m.exp(-f))
+       if(f<=0.5):
            return 0
        else:
            return 1
