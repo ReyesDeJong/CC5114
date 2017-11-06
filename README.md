@@ -14,3 +14,12 @@ Bob-->Alice: I am good thanks!
 
 
 > **Note:** You can find more information about **LaTeX** mathematical expressions [here][4].
+
+
+You can specify column alignment with one or two colons:
+
+| Item     | Value | Qty   |
+| :------- | ----: | :---: |
+| Computer | $1600 |  5    |
+| Phone    | $12   |  12   |
+| Pipe     | $1    |  234  |
